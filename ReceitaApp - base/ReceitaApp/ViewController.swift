@@ -16,7 +16,13 @@ class ViewController: UIViewController {
     }
     
     
-
+    @IBAction func tapAction(_ sender: Any) {
+        if  let vc = storyboard?.instantiateViewController(withIdentifier: "receita") as? ReceitaViewControler {
+            vc.receitaSelecionada = 1
+            self.navigationController?.show(vc, sender: self)
+        }
+    }
+    
 
 }
 
